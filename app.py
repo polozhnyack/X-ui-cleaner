@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Header, Request
 from pydantic import BaseModel
 from cleaner import XUIcleaner
-from config import DB_PATH, API_KEY
+from config import DB_PATH, API_TOKEN
 
 
 
@@ -27,7 +27,7 @@ cleaner = XUIcleaner(DB_PATH)
 
 
 def check_api_key(x_api_key: str | None):
-    if x_api_key != API_KEY:
+    if x_api_key != API_TOKEN:
         raise HTTPException(status_code=401, detail="Invalid API key")
 
 
