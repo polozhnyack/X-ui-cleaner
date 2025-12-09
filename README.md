@@ -33,7 +33,7 @@ docker run -d \
 ### Эндпоинт для удаления клиента
 
 ```http
-DELETE /delete-client
+DELETE /deleteclient
 ```
 
 **Заголовки:**
