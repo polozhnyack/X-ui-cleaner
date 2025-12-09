@@ -130,7 +130,7 @@ class XUIcleaner:
         cursor = conn.cursor()
 
         cursor.execute(
-            "DELETE FROM inbound_client_ips WHERE email = ?",
+            "DELETE FROM inbound_client_ips WHERE client_email = ?",
             (self.email,)
         )
         ips_deleted = cursor.rowcount
