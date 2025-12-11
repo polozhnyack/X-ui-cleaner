@@ -3,7 +3,6 @@ import sqlite3
 DB_PATH = "/etc/x-ui/x-ui.db"
 
 
-
 conn = sqlite3.connect(DB_PATH)
 cur = conn.cursor()
 
